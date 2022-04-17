@@ -2289,16 +2289,18 @@ var DockManager = class DashToDock_DockManager {
                              this._preferredMonitorIndex == Main.layoutManager.primaryIndex;
 
         if (!isHorizontal && dockOnPrimary && this.settings.dockExtended && this.settings.dockFixed) {
-            Main.panel._rightCorner.hide();
-            Main.panel._leftCorner.hide();
+            // bug in here
+            // Main.panel._rightCorner.hide();
+            // Main.panel._leftCorner.hide();
         }
         else
             this._revertPanelCorners();
     }
 
     _revertPanelCorners() {
-        Main.panel._leftCorner.show();
-        Main.panel._rightCorner.show();
+        // bug in here
+        // Main.panel._leftCorner.show();
+        // Main.panel._rightCorner.show();
     }
 };
 Signals.addSignalMethods(DockManager.prototype);
